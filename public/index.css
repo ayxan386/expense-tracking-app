@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "H H H" "S S Pi" "P . G";
+  -ms-grid-rows: 80px minmax(690px, 60%) minmax(480px, 40%);
+      grid-template-rows: 80px minmax(690px, 60%) minmax(480px, 40%);
+  -ms-grid-columns: 25% 34% 36%;
+      grid-template-columns: 25% 34% 36%;
+  grid-gap: 8px 5px;
+  margin: 0;
+}
+
+#main #expence-poster {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: P;
+  background: #fff;
+  padding: 10px 15px;
+  height: 100%;
+  max-height: 560px;
+}
+
+#main #expence-poster input {
+  width: 62%;
+}
+
+#main header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: H;
+}
+
+#main #expences {
+  border-radius: 4px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: G;
+  list-style-type: none;
+  max-height: 560px;
+  overflow-y: scroll;
+}
+
+#main #expences .expence {
+  padding: 10px 15px;
+  background: #fff;
+  border-bottom: 2px solid #777;
+}
+
+#main #expences .expence header {
+  color: black;
+  font-size: 2rem;
+}
+
+#main #expences .expence header small {
+  font-size: 12px;
+}
+
+#main #expences .expence div {
+  font-size: 1.3rem;
+}
+
+#main #pie {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: Pi;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background: #fff;
+  width: 660px;
+  height: 85%;
+}
+
+#main #scatter {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: S;
+  width: 1080px;
+  height: 85%;
+  background: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  color: black;
+}
+
+.inline-center {
+  display: inline-block;
+  text-align: center;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media (max-width: 1720px) {
+  #main {
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "H" "S" "Pi" "P" "G";
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[auto-fit];
+        grid-template-rows: repeat(auto-fit, auto);
+    margin: 0;
+  }
+  #main #expence-poster {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: P;
+    background: #fff;
+    padding: 10px 15px;
+    height: 100%;
+    max-height: 560px;
+    width: 95%;
+  }
+  #main header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: H;
+  }
+  #main #expences {
+    border-radius: 4px;
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: G;
+    list-style-type: none;
+    max-height: 560px;
+    overflow-y: scroll;
+  }
+  #main #expences .expence {
+    padding: 10px 15px;
+    background: #fff;
+    border-bottom: 2px solid #777;
+  }
+  #main #expences .expence header {
+    color: black;
+    font-size: 2rem;
+  }
+  #main #expences .expence header small {
+    font-size: 12px;
+  }
+  #main #expences .expence div {
+    font-size: 1.3rem;
+  }
+  #main #pie {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: Pi;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    background: #fff;
+    width: 660px;
+    height: 85%;
+  }
+  #main #scatter {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: S;
+    width: 720px;
+    height: 85%;
+    background: #fff;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    color: black;
+  }
+}
+/*# sourceMappingURL=index.css.map */

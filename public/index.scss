@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  height: auto;
+  display: grid;
+  grid-template-areas: "H H H" "S S Pi" "P . G";
+  grid-template-rows: 80px minmax(690px, 60%) minmax(480px, 40%);
+  grid-template-columns: 25% 34% 36%;
+  grid-gap: 8px 5px;
+  margin: 0;
+  #expence-poster {
+    grid-area: P;
+    background: #fff;
+    padding: 10px 15px;
+    height: 100%;
+    max-height: 560px;
+    input {
+      width: 62%;
+    }
+  }
+  header {
+    grid-area: H;
+  }
+  #expences {
+    border-radius: 4px;
+    grid-area: G;
+    list-style-type: none;
+    max-height: 560px;
+
+    overflow-y: scroll;
+    .expence {
+      padding: 10px 15px;
+      background: #fff;
+      border-bottom: 2px solid #777;
+      header {
+        color: black;
+        font-size: 2rem;
+        small {
+          font-size: 12px;
+        }
+      }
+      div {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  #pie {
+    grid-area: Pi;
+    align-self: center;
+    justify-self: center;
+    background: #fff;
+    width: 660px;
+    height: 85%;
+  }
+  #scatter {
+    // padding: 40px 35px 75px 35px;
+    grid-area: S;
+    width: 1080px;
+    height: 85%;
+    background: #fff;
+    align-self: center;
+    justify-self: center;
+    color: black;
+  }
+}
+
+.inline-center {
+  display: inline-block;
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+//For small sized screens
+
+@media (max-width: 1720px) {
+  #main {
+    height: auto;
+    display: grid;
+    grid-template-areas: "H" "S" "Pi" "P" "G";
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto-fit, auto);
+    margin: 0;
+    #expence-poster {
+      grid-area: P;
+      background: #fff;
+      padding: 10px 15px;
+      height: 100%;
+      max-height: 560px;
+      width: 95%;
+    }
+    header {
+      grid-area: H;
+    }
+    #expences {
+      border-radius: 4px;
+      grid-area: G;
+      list-style-type: none;
+      max-height: 560px;
+
+      overflow-y: scroll;
+      .expence {
+        padding: 10px 15px;
+        background: #fff;
+        border-bottom: 2px solid #777;
+        header {
+          color: black;
+          font-size: 2rem;
+          small {
+            font-size: 12px;
+          }
+        }
+        div {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    #pie {
+      grid-area: Pi;
+      align-self: center;
+      justify-self: center;
+      background: #fff;
+      width: 660px;
+      height: 85%;
+    }
+    #scatter {
+      // padding: 40px 35px 75px 35px;
+      grid-area: S;
+      width: 720px;
+      height: 85%;
+      background: #fff;
+      align-self: center;
+      justify-self: center;
+      color: black;
+    }
+  }
+}

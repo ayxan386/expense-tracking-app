@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="http://localhost:3000/logo" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <main class="jumbotron" id="main">
+      <header>
+        <h1>Expense tracker</h1>
+        <h4>Use form below to add new expense</h4>
+      </header>
+      <form id="expence-poster">
+        <fieldset>
+          <legend>Expense Poster</legend>
+          <div class="form-group">
+            <label for="title" class="col-form-label">Title </label>
+            <input type="text" name="title" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="amount" class="col-form-label">Amount </label>
+            <input type="text" name="amount" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="type" class="col-form-label">Type </label>
+            <select name="type" id="type">
+              <option value="edible">Food and Stuff</option>
+              <option value="transport">Transportation</option>
+              <option value="clothing">Clothing</option>
+              <option value="fee">Fees</option>
+              <option value="others">others</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Expenditure date </label><br />
+            <input type="date" name="date" id="date" />
+          </div>
+        </fieldset>
+        <div class="flex-center">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+      <div id="expences">
+        <ul id="list"></ul>
+      </div>
+      <div id="pie"></div>
+      <div id="scatter"></div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- <script src="//d3plus.org/js/d3plus.js"></script> -->
+    <script src="form_loader.js"></script>
+    <script src="graphs.js"></script>
+  </body>
+</html>
